@@ -8,5 +8,5 @@ data <- dataAll[dataAll$Date == "1/2/2007" | dataAll$Date == "2/2/2007", ]
 data$Date <- as.Date(data$Date,format='%d/%m/%Y')
 data$Time <- strptime(data$Time,format="%H:%M:%S")
 
-hist(data$Global_active_power,main="Global Active Power",col="red",xlab="Global Active Power(kilowatts)")
+p1 <- hist(data$Global_active_power,main="Global Active Power",col="red",xlab="Global Active Power(kilowatts)")
 png("plot1.png")
