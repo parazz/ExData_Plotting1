@@ -8,6 +8,7 @@ data$newvar <- strptime(paste(data$Date, data$Time), format="%d/%m/%Y %H:%M:%S")
 data$Date <- as.Date(data$Date,format='%d/%m/%Y')
 data$Time <- strptime(data$Time,format="%H:%M:%S")
 
-png(filename="plot1.png",height=480,width=480)
-hist(data$Global_active_power,main="Global Active Power",col="red",xlab="Global Active Power(kilowatts)")
+png(filename='plot2.png',height=480,width=480)
+plot(y=data$Global_active_power,x=data$newvar, type = "l",ylab = "Global Active Power (kilowatts)",xlab="")
 dev.off()
+
